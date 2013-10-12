@@ -86,8 +86,10 @@ public:
 			// get file size, etc.
 			unz_file_info fileInfo;
 			unzGetCurrentFileInfo( m_zipFile, &fileInfo, 0, 0, 0, 0, 0, 0 );
+#ifdef DEBUG
 			const size_t size = pSize * pCount;
 			assert( size <= fileInfo.uncompressed_size );
+#endif
 			
 			// The file has EXACTLY the size of uncompressed_size. In C
 			// you need to mark the last character with '\0', so add 
