@@ -1,1 +1,3 @@
 build
+.DS_Store
+workspaces/xcode3/assimp.xcodeproj/xcuserdata/
