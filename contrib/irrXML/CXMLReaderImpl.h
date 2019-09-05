@@ -433,7 +433,7 @@ private:
 			++P;
 
     // remove trailing whitespace, if any
-    while( std::isspace( P[-1]))
+    while( std::isspace( (int)P[-1]))
       --P;
 
 		NodeName = core::string<char_type>(pBeginClose, (int)(P - pBeginClose));
